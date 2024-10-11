@@ -6,24 +6,6 @@
     const verifyBtn = document.getElementById('verifyBtn');
     const moreinfobutton = document.getElementById('moreinfobutton');
 
-    let currentStep = 0;
-    const ONE_MINUTE = 60000;
-
-    // Load the saved step if within 1 minute
-    function loadSavedStep() {
-        const savedStep = localStorage.getItem('currentStep');
-        const savedTime = localStorage.getItem('stepTimestamp');
-        const now = new Date().getTime();
-
-        if (savedStep && savedTime && (now - savedTime) < ONE_MINUTE) {
-            currentStep = parseInt(savedStep, 10);
-            activateStep(currentStep);
-            updateButtonStates();
-        }
-
-				
-    }
-
     function activateStep(stepIndex) {
         steps.forEach((step, index) => {
             if (index === stepIndex) {
@@ -103,7 +85,7 @@
             this.querySelector('.button-content').textContent = 'File Downloaded!';
             completeStep(this);
             enableNextButton(confirmDownloadBtn);
-        }, 5000);
+        }, 3000);
     });
 
     confirmDownloadBtn.addEventListener('click', function() {
@@ -139,6 +121,4 @@
     }
 
 
-
-    // Load saved step on page load
-    window.addEventListener('load', loadSavedStep);</script>
+</script>
