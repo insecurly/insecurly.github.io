@@ -28,7 +28,7 @@ Insecurly is a locally hosted web platform that effectively bypasses the majorit
 
 ### Whitelisting
 - **CFBISD Students**: After opening the page, click "Email Verificaction", then enter your @cfbisd.edu email and follow the instructions.
-- **Others**: After opening the page, click "Anonymous Verification", and follow the instructions. For privacy reasons, some restrictions apply for these people.
+- **Others (NOT ADDED YET)**: After opening the page, click "Anonymous Verification", and follow the instructions. For privacy reasons, some restrictions apply for these people.
 
 ### Privacy
 - The script is non-invasive and ensures the safety of personal information, interacting only with publicly available data.
