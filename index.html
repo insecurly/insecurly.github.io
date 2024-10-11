@@ -236,27 +236,6 @@
 				    height: auto;
 				}
 
-				.readme-container {
-			      background-color: var(--surface);
-			      padding: 2rem;
-			      border-radius: 1rem;
-			      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-			      max-width: 800px;
-			      margin: 0 auto;
-			  }
-			
-			  .readme-content {
-			      max-height: 60vh; /* Limit height */
-			      overflow-y: auto; /* Make content scrollable if it's too long */
-			      white-space: pre-wrap; /* Preserve line breaks */
-			      font-family: 'Fira Code', monospace; /* Use a monospace font for code blocks */
-			      font-size: 1rem;
-			      line-height: 1.5;
-			      padding: 1rem;
-			      background-color: var(--background); /* Darker background for code */
-			      border-radius: 0.5rem;
-			      color: var(--text); /* Text color */
-			  }
 				pre, code {
 			      font-family: 'Fira Code', monospace; /* Consistent code font */
 			      padding: 1rem;
@@ -281,7 +260,8 @@
 				
 				
         <div class="instructions-container">
-			    	<button class="button" id="skipToReadmeBtn" style="margin-top: 0rem;">Skip to README</button>
+			    	<button class="button" id="moreinfobutton" style="margin-top: 0rem;">More Info</button>
+						
             <div class="step active" id="step1">
                 <div class="step-header">
                     <div class="step-number">1</div>
@@ -346,7 +326,7 @@
     const confirmDownloadBtn = document.getElementById('confirmDownloadBtn');
     const openFileBtn = document.getElementById('openFileBtn');
     const verifyBtn = document.getElementById('verifyBtn');
-    const skipToReadmeBtn = document.getElementById('skipToReadmeBtn');
+    const moreinfobutton = document.getElementById('moreinfobutton');
 
     let currentStep = 0;
     const ONE_MINUTE = 60000;
@@ -392,7 +372,6 @@
         }
         if (currentStep > 3) {
             completeButton(verifyBtn);
-            loadReadme();
         }
     }
 
@@ -459,11 +438,10 @@
 
     verifyBtn.addEventListener('click', function() {
         completeStep(this);
-        loadReadme(); // Load README after last step
     });
 
-    skipToReadmeBtn.addEventListener('click', function() {
-        loadReadme(); // Load README when button is clicked
+    moreinfobutton.addEventListener('click', function() {
+        window.open('https://github.com/insecurly/insecurly.github.io/blob/main/README.md', target = "_blank");
     });
 
     function downloadFile() {
@@ -480,44 +458,7 @@
         });
     }
 
-    // Load README.md and display it
-    function loadReadme() {
-        fetch('https://insecurly.github.io/README.md')
-            .then(response => response.text())
-            .then(readme => {
-                displayReadme(readme);
-            })
-            .catch(error => {
-                console.error('Failed to load README:', error);
-            });
-    }
 
-		function backtoinstructions() {
-		  	localStorage.setItem('currentStep', 0);
-        localStorage.setItem('stepTimestamp', new Date().getTime());
-
-				window.location.reload();
-		}
-
-    // Display README content and apply syntax highlighting
-    function displayReadme(content) {
-        instructionsContainer.innerHTML = `
-				    <div class="readme-container">
-				        <button class="button" id="backToInstructionsBtn" onclick="backtoinstructions();">Back to Instructions</button>
-				            <pre><code class="language-markdown">${content}</code></pre>
-				    </div>
-				`;
-        instructionsContainer.classList.add('completed');
-        Prism.highlightAll(); // Use Prism.js for syntax highlighting
-
-        // Add event listener for the back button
-        document.getElementById('backToInstructionsBtn').addEventListener('click', function() {
-            instructionsContainer.classList.remove('completed'); // Remove completed class to show instructions
-            activateStep(currentStep); // Reactivate the current step
-            updateButtonStates(); // Update button states
-            scrollToNextStep(); // Scroll to the current step
-        });
-    }
 
     // Load saved step on page load
     window.addEventListener('load', loadSavedStep);
