@@ -1,30 +1,34 @@
-## Insecurly
----
-### Overview
-Insecurly is a locally run JavaScript-based webpage designed to bypass monitoring methods like Securly. It provides a safe and virtually unblockable environment for activities such as playing games and watching YouTube.
+## Overview
+Insecurly is a locally hosted web platform that effectively bypasses the majority of Securly's monitoring techniques. It provides a secure and bulletproof environment for users to access proxies, play games, chat, and more.
 
-### Features
-- Toggle Tab Hiding (anyone watching your screen on securly will see a blank page, so you can watch youtube/play games on the webpage unbothered)
-- Youtube integration (load any youtube video with the link to it, which is inconvinient but due to security reasons it's not possible to load the actual homepage)
-- Snake Game (self explanatory, it took me 5 hours to get it to work. also you can still play snake with tab hiding on ur welcome)
-  
+
+## Features
+- Automatic Page Capture Cloaking
+- Automatic Title Spoofing
+- Dynamic about:blank cloaking
+- Fully Encrypted and obfuscated
+- Youtube Integration (to be expanded on)
+- Custom Proxy Support
+- Automatic User Whitelist Handling (24hrs per)
+- Secure Chat with other online users
+
 ### Usage
 
 #### Method 1 (Website):
 - Visit the [Insecurly Webpage](https://insecurly.github.io) and follow the provided instructions.
 
 #### Method 2 (If the Website is Blocked):
-- Download [index.html](https://raw.githubusercontent.com/insecurly/insecurly.github.io/main/index.html) to your Chromebook.
+- Download [loader.html](https://raw.githubusercontent.com/insecurly/insecurly.github.io/main/loader.html) to your Chromebook.
 - Save it to your Downloads folder.
-- Open the downloaded `index.html` file locally from your Chromebook's Downloads folder.
+- Open the downloaded `index.html` file by navigating to it in your files app, then double clicking it.
 
 ### Requirements
-- The script only functions if opened locally from the Chromebook's Downloads folder. This is essential for gathering specific device information required by the script.
-- You are required to be whitelisted in order to use the scrip. Go ahead, try to crack it! its very secure :)
+- The script will only function when located inside of the *Downloads Folder* of a school issued chromebook.
+- Automatic Whitelisting is only supported for CFBISD students. Support for others will be added soon.
 
 ### Whitelisting
-- **Permanent Whitelist**: Obtain a permanent whitelist by requesting the script owner to provide a whitelist key. This grants unlimited access to the script on the specified device.
-- **Temporary Whitelist**: Choose the temporary option and follow verification steps for 24 hours of access. Both types of whitelists are subject to revocation if the script is misused.
+- **CFBISD Students**: After opening the page, click "Email Verificaction", then enter your @cfbisd.edu email and follow the instructions.
+- **Others**: After opening the page, click "Anonymous Verification", and follow the instructions. For privacy reasons, some restrictions apply for these people.
 
 ### Privacy
 - The script is non-invasive and ensures the safety of personal information, interacting only with publicly available data.
