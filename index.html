@@ -76,7 +76,7 @@
         padding: 1.5rem;
         box-shadow: var(--shadow);
         margin-bottom: 1.5rem;
-        opacity: .5;
+        opacity: 1;
         transition: opacity .4s ease
       }
 
@@ -278,7 +278,7 @@
             <h2 class=step-title>Confirm Download</h2>
           </div>
           <div class=step-content>
-            <p>Please confirm that you have downloaded the file to your Downloads folder.</p><button class=button id=confirmDownloadBtn disabled>CONFIRM</button>
+            <p>Make sure you saved the file to your <strong>DOWNLOADS</strong> folder. This is important. If it's elsewhere, click and drag it into Downloads.</p>
           </div>
         </div>
         <div class=step id=step3>
@@ -290,7 +290,7 @@
             <div class=step-content-wrapper>
               <div class=gif-container><img alt="Opening Files App and loader.html" src=https://insecurly.github.io/open%20file.gif></div>
               <div class=step-text>
-                <p>Open your Files app, navigate to the Downloads folder, then double-click on the loader.html file and come back to this page.</p><button class=button id=openFileBtn disabled>I've Opened the File</button>
+                <p>Open your Files app, navigate to the Downloads folder, then double-click on the loader.html file.</p>
               </div>
             </div>
           </div>
@@ -298,10 +298,19 @@
         <div class=step id=step4>
           <div class=step-header>
             <div class=step-number>4</div>
-            <h2 class=step-title>Verify in the Site</h2>
+            <h2 class=step-title>Loading the site</h2>
           </div>
           <div class=step-content>
-            <p>Choose either email or anonymous verification, then follow the steps to complete the process.</p><button class=button id=verifyBtn disabled>Done!</button>
+            <p>Once you double click the loader, a page will open in your browser. If it's blank, make sure to enable popups via the window on the right side of your url bar. After popups are enabled, reload the page.</p>
+          </div>
+        </div>
+				<div class=step id=step5>
+          <div class=step-header>
+            <div class=step-number>5</div>
+            <h2 class=step-title>Whitelisting</h2>
+          </div>
+          <div class=step-content>
+            <p>Once in the site, click the whitelist button and enter your @cfbmail.com email. When prompted, enter the code sent to your email. (make sure to check spam/all mail)</p>
           </div>
         </div>
       </div>
@@ -310,9 +319,6 @@
       const steps = document.querySelectorAll('.step');
       const instructionsContainer = document.querySelector('.instructions-container');
       const downloadBtn = document.getElementById('downloadBtn');
-      const confirmDownloadBtn = document.getElementById('confirmDownloadBtn');
-      const openFileBtn = document.getElementById('openFileBtn');
-      const verifyBtn = document.getElementById('verifyBtn');
       const moreinfobutton = document.getElementById('moreinfobutton');
 
       function activateStep(stepIndex) {
@@ -393,17 +399,6 @@
           completeStep(this);
           enableNextButton(confirmDownloadBtn);
         }, 3000);
-      });
-      confirmDownloadBtn.addEventListener('click', function() {
-        completeStep(this);
-        enableNextButton(openFileBtn);
-      });
-      openFileBtn.addEventListener('click', function() {
-        completeStep(this);
-        enableNextButton(verifyBtn);
-      });
-      verifyBtn.addEventListener('click', function() {
-        completeStep(this);
       });
       moreinfobutton.addEventListener('click', function() {
         window.open('https://github.com/insecurly/insecurly.github.io/blob/main/README.md', target = "_blank");
