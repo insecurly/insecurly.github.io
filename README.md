@@ -6,10 +6,10 @@ Insecurly is a locally hosted web platform that effectively bypasses the majorit
 - Automatic Page Capture Cloaking
 - Automatic Title Spoofing
 - Dynamic about:blank cloaking
-- Fully Encrypted and obfuscated
+- Fully Encrypted
 - Youtube Integration (to be expanded on)
-- Custom Proxy Support
-- Automatic User Whitelist Handling (24hrs per)
+- Proxy Support
+- User Whitelisting
 - Secure Chat with other online users
 
 ### Usage
@@ -28,7 +28,6 @@ Insecurly is a locally hosted web platform that effectively bypasses the majorit
 
 ### Whitelisting
 - **CFBISD Students**: After opening the page, click "Email Verificaction", then enter your @cfbisd.edu email and follow the instructions.
-- **Others (NOT ADDED YET)**: After opening the page, click "Anonymous Verification", and follow the instructions. For privacy reasons, some restrictions apply for these people.
 
 ### Privacy
 - The script is non-invasive and ensures the safety of personal information, interacting only with publicly available data.
