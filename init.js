@@ -1,6 +1,6 @@
 (async () => {
     try {
-        const response = await fetch('https://insecurly-proxy-4049abcc7e4e.herokuapp.com/get_loader');
+        const response = await fetch('https://insecurly-proxy.fly.dev/get_loader');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
