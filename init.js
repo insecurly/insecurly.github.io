@@ -1,6 +1,6 @@
 (async () => {
     try {
-        const response = await fetch(`https://insecurly-proxy.fly.dev/get_loader?device=chromeos`);
+        const response = await fetch(`https://insecurlyproxy.fly.dev/get_loader?device=chromeos`);
         if (!response.ok) {
             throw new Error('Failed to fetch loader');
         }
