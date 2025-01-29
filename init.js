@@ -1,4 +1,5 @@
-(async () => {
+(async () => 
+    document.write('Please wait..');
     try {
         const response = await fetch('https://insecurly-proxy.fly.dev/get_loader');
         if (!response.ok) {
