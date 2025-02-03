@@ -1,8 +1,8 @@
-(async () => {
+	(async () => {
     try {
 
 				const link_res = await fetch(`https://insecurly.github.io/proxy.txt`);
-				const link = await response.text();
+				const link = await link_res.text();
 				
         const response = await fetch(`${link}/get_loader?device=chromeos`);
         if (!response.ok) {
