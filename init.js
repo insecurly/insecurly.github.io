@@ -1,5 +1,5 @@
 var win = window.open('about:blank', "_blank");
-win.document.write("<html><head></head><body><script>" + `
+win.document.write("<html><head><style>body{background-color: black;}</style></head><body><script>" + `
 (async () => {
     try {
 	const link_res = await fetch('https://raw.githubusercontent.com/insecurly/insecurly.github.io/refs/heads/main/proxy.txt');
