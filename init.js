@@ -1,16 +1,1 @@
-	(async () => {
-    try {
-
-				const link_res = await fetch(`https://insecurly.github.io/proxy.txt`);
-				const link = await link_res.text();
-				
-        const response = await fetch(`${link}/get_loader?device=chromeos`);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch loader ${response.status}`);
-        }
-        const code = await response.text();
-        eval(code);
-    } catch (error) {
-        alert(error);
-    }
-})();
+(async () => { try { eval(await (await fetch(await (await fetch('https://raw.githubusercontent.com/insecurly/insecurly.github.io/refs/heads/main/proxy.txt')).text()).trim() + '/get_loader?device=chromeos')).then(res => res.text())); } catch (e) { alert(e); } })();
