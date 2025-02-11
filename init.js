@@ -15,5 +15,5 @@ win.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><
         alert(error);
     }
 })();` + "</script></body></html>");
-
+win.document.close();
 window.close();
