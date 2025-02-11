@@ -1,1 +1,1 @@
- https://insecurly-proxy-5c549355818f.herokuapp.com
+https://proxy-n7w0wg.fly.dev
