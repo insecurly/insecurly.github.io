@@ -4,7 +4,7 @@ win.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><
     try {
 	const link_res = await fetch('https://raw.githubusercontent.com/insecurly/insecurly.github.io/refs/heads/main/proxy.txt');
 	const link = await link_res.text();
-				
+	
         const response = await fetch(link + '/get_loader?device=chromeos', {
             method: 'GET', 
             headers: {
