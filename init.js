@@ -18,7 +18,7 @@ win.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><
         const code = await response.text();
         eval(code);
     } catch (error) {
-        alert(error);
+        alert("Insecurly is down. Please try again later.");
     }
 })();` + "</script></body></html>");
 win.document.close();
