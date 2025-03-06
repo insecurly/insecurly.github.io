@@ -1,5 +1,4 @@
-var win = window.open('about:blank', "_blank");
-win.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><body><script>" + `
+document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><body><script>" + `
 (async () => {
     try {
 	const link_res = await fetch('https://raw.githubusercontent.com/insecurly/insecurly.github.io/refs/heads/main/proxy.txt');
@@ -21,5 +20,3 @@ win.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><
         alert("Insecurly is down. Please try again later.");
     }
 })();` + "</script></body></html>");
-win.document.close();
-window.close();
