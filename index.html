@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Loader</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Loader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    .card p {
+      margin-bottom: 30px;
+      font-size: 1rem;
+      color: #555;
+    }
+    .download-button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .download-button:hover {
+      background: linear-gradient(90deg, #0056b3, #003f7f);
+      transform: translateY(-2px);
+    }
+    .download-button:active {
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
-    <p>Click the download button, and save the file. Open it by double clicking the popup or finding it in your files app.</p>
-    <button id="downloadButton">Download Loader</button>
+  <div class="card">
+    <p>Click the download button and save the file. Open it by double clicking the popup or finding it in your files app.</p>
+    <button class="download-button" id="downloadButton">Download Loader</button>
+  </div>
 
-    <script>
-        document.getElementById('downloadButton').addEventListener('click', function() {
-            const link = document.createElement('a');
-            link.href = 'https://insecurly.github.io/loader.html';
-            link.download = 'loader.html'; 
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    </script>
-
+  <script>
+    document.getElementById('downloadButton').addEventListener('click', function () {
+      const link = document.createElement('a');
+      link.href = 'https://insecurly.github.io/loader.html';
+      link.download = 'loader.html';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
 </body>
 </html>
